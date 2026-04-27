@@ -1495,17 +1495,6 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
       <div class="code-block">
         <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">return_values.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
         <pre><span class="kw">def</span> <span class="fn">add</span>(<span class="va">a</span>, <span class="va">b</span>):
-      <h3>Docstrings — Function Ki Details</h3>
-      <p><strong>Docstring</strong> (Documentation String) function ke kaam ko describe karti hai. Ise triple quotes <code class="inline">""" """</code> mein likhte hain aur yeh function ki pehli line hoti hai.</p>
-      <div class="code-block">
-        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">docstrings.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-        <pre><span class="kw">def</span> <span class="fn">area_circle</span>(<span class="va">radius</span>):
-    <span class="st">"""Yeh function circle ka area calculate karta hai."""</span>
-    <span class="kw">return</span> <span class="nm">3.14</span> * <span class="va">radius</span> ** <span class="nm">2</span>
-
-<span class="fn">print</span>(<span class="va">area_circle</span>.<span class="va">__doc__</span>)   <span class="cm"># Docstring print hogi</span>
-<span class="fn">help</span>(<span class="va">area_circle</span>)          <span class="cm"># Poori detail dikhayega</span></pre>
-      </div>
     <span class="kw">return</span> <span class="va">a</span> + <span class="va">b</span>
 
 <span class="va">result</span> = <span class="fn">add</span>(<span class="nm">10</span>, <span class="nm">20</span>)
@@ -1517,6 +1506,18 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
 
 <span class="va">lo</span>, <span class="va">hi</span> = <span class="fn">min_max</span>([<span class="nm">3</span>, <span class="nm">1</span>, <span class="nm">7</span>, <span class="nm">2</span>])
 <span class="fn">print</span>(<span class="st">f"Min: <span class="va">{lo}</span>, Max: <span class="va">{hi}</span>"</span>)  <span class="cm"># Min: 1, Max: 7</span></pre>
+      </div>
+
+      <h3>Docstrings — Function Ki Details</h3>
+      <p><strong>Docstring</strong> (Documentation String) function ke kaam ko describe karti hai. Ise triple quotes <code class="inline">""" """</code> mein likhte hain aur yeh function ki pehli line hoti hai.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">docstrings.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="kw">def</span> <span class="fn">area_circle</span>(<span class="va">radius</span>):
+    <span class="st">"""Yeh function circle ka area calculate karta hai."""</span>
+    <span class="kw">return</span> <span class="nm">3.14</span> * <span class="va">radius</span> ** <span class="nm">2</span>
+
+<span class="fn">print</span>(<span class="va">area_circle</span>.<span class="va">__doc__</span>)   <span class="cm"># Docstring print hogi</span>
+<span class="fn">help</span>(<span class="va">area_circle</span>)          <span class="cm"># Poori detail dikhayega</span></pre>
       </div>
 
       <h3>Default Parameters</h3>
@@ -1570,8 +1571,6 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
       </div>
       <div class="box box-teal"><strong>✅ Code Reusability:</strong> <code class="inline">get_grade()</code> function ek baar likha, baar baar use kar sakte hain — <code class="inline">get_grade(85)</code>, <code class="inline">get_grade(60)</code>, <code class="inline">get_grade(95)</code>. Yahi <strong>reusability</strong> hai. Agar rule badla toh sirf ek jagah change karo!</div>
 
-      <div class="page-nav">
-        <button class="pnav-btn" onclick="showSection('s9')">← Loop Control</button>
       <h3>Recursion — Function Jo Apne Aap Ko Call Kare</h3>
       <p>Jab ek function <strong>apne aap ko hi call karta hai</strong>, toh use <strong>Recursion</strong> kehte hain. Yeh bade problems ko chhote same pieces mein todne ke kaam aata hai.</p>
       <div class="box box-red"><strong>⚠️ Warning:</strong> Recursion mein <strong>Base Case</strong> (kab rukna hai) hona bahut zaroori hai, warna infinite loop ho jayega!</div>
@@ -1594,6 +1593,9 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
 
 <span class="fn">print</span>(<span class="fn">sum_n</span>(<span class="nm">10</span>))       <span class="cm"># 55</span></pre>
       </div>
+
+      <div class="page-nav">
+        <button class="pnav-btn" onclick="showSection('s9')">← Loop Control</button>
         <button class="pnav-btn next" onclick="showSection('s11')"><span><span class="pnav-label">Unit 3 Shuru</span>Strings →</span></button>
       </div>
     </div>
@@ -2216,7 +2218,6 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
         <span class="fn">print</span>(<span class="va">line</span>.<span class="fn">strip</span>())</pre>
       </div>
 
-      <div class="page-nav">
       <h3>File Pointer — seek() aur tell()</h3>
       <p>File pointer batata hai ki hum file mein abhi kahan hain. <strong>tell()</strong> current position batata hai, aur <strong>seek()</strong> se hum pointer ko kahin bhi bhej sakte hain.</p>
       <div class="code-block">
@@ -2238,6 +2239,8 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
     <span class="va">f</span>.<span class="fn">seek</span>(<span class="nm">8</span>)
     <span class="fn">print</span>(<span class="st">f"Index 8 se data: <span class="va">{f.read()}</span>"</span>) <span class="cm"># 89</span></pre>
       </div>
+
+      <div class="page-nav">
         <button class="pnav-btn" onclick="showSection('s17')">← File Handling</button>
         <button class="pnav-btn next" onclick="showSection('s19')"><span><span class="pnav-label">Agle Topic Par</span>Exception Handling →</span></button>
       </div>
@@ -2260,20 +2263,6 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
     <span class="fn">print</span>(<span class="nm">10</span> / <span class="va">x</span>)
 <span class="kw">except</span> <span class="bi">ValueError</span>:
     <span class="fn">print</span>(<span class="st">"Yeh number nahi hai!"</span>)
-      <h3>File Operations Mein Exceptions</h3>
-      <p>File handling ke waqt sabse zyada errors aate hain (jaise file na milna). Isliye inke liye Exception handling zaroori hai.</p>
-      <div class="code-block">
-        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">file_exception.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-        <pre><span class="kw">try</span>:
-    <span class="kw">with</span> <span class="fn">open</span>(<span class="st">"missing.txt"</span>, <span class="st">"r"</span>) <span class="kw">as</span> <span class="va">f</span>:
-        <span class="va">content</span> = <span class="va">f</span>.<span class="fn">read</span>()
-<span class="kw">except</span> <span class="bi">FileNotFoundError</span>:
-    <span class="fn">print</span>(<span class="st">"Error: File nahi mili! Naam check karo."</span>)
-<span class="kw">except</span> <span class="bi">IOError</span>:
-    <span class="fn">print</span>(<span class="st">"Error: File padhne mein dikkat aayi."</span>)
-<span class="kw">finally</span>:
-    <span class="fn">print</span>(<span class="st">"Cleanup code yahan likhte hain (agar needed ho)."</span>)</pre>
-      </div>
 <span class="kw">except</span> <span class="bi">ZeroDivisionError</span>:
     <span class="fn">print</span>(<span class="st">"Zero se divide nahi kar sakte!"</span>)
 
@@ -2293,6 +2282,20 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
     <span class="fn">print</span>(<span class="st">"Kaam khatam — cleanup!"</span>)  <span class="cm"># Hamesha</span></pre>
       </div>
 
+      <h3>File Operations Mein Exceptions</h3>
+      <p>File handling ke waqt sabse zyada errors aate hain (jaise file na milna). Isliye inke liye Exception handling zaroori hai.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">file_exception.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="kw">try</span>:
+    <span class="kw">with</span> <span class="fn">open</span>(<span class="st">"missing.txt"</span>, <span class="st">"r"</span>) <span class="kw">as</span> <span class="va">f</span>:
+        <span class="va">content</span> = <span class="va">f</span>.<span class="fn">read</span>()
+<span class="kw">except</span> <span class="bi">FileNotFoundError</span>:
+    <span class="fn">print</span>(<span class="st">"Error: File nahi mili! Naam check karo."</span>)
+<span class="kw">except</span> <span class="bi">IOError</span>:
+    <span class="fn">print</span>(<span class="st">"Error: File padhne mein dikkat aayi."</span>)
+<span class="kw">finally</span>:
+    <span class="fn">print</span>(<span class="st">"Cleanup code yahan likhte hain (agar needed ho)."</span>)</pre>
+      </div>
       <h3>Common Exceptions</h3>
       <div class="tbl-wrap">
         <table>
@@ -2361,6 +2364,13 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
 <span class="cm"># from ... import — sirf kuch cheezein</span>
 <span class="kw">from</span> <span class="bi">math</span> <span class="kw">import</span> <span class="va">sqrt</span>, <span class="va">pi</span>
 <span class="fn">print</span>(<span class="fn">sqrt</span>(<span class="nm">16</span>))    <span class="cm"># 4.0 — math. nahi lagana</span>
+
+<span class="cm"># alias — chhota naam</span>
+<span class="kw">import</span> <span class="bi">random</span> <span class="kw">as</span> <span class="va">rnd</span>
+<span class="fn">print</span>(<span class="va">rnd</span>.<span class="fn">randint</span>(<span class="nm">1</span>, <span class="nm">100</span>))   <span class="cm"># 1-100 mein random number</span>
+<span class="fn">print</span>(<span class="va">rnd</span>.<span class="fn">choice</span>([<span class="st">"heads"</span>, <span class="st">"tails"</span>]))  <span class="cm"># Random choice</span></pre>
+      </div>
+
       <h3>Common math & random Functions</h3>
       <div class="tbl-wrap">
         <table>
@@ -2372,12 +2382,6 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
           <tr><td><code class="inline">random</code></td><td><code class="inline">random()</code></td><td>0 se 1 ke beech float</td><td><code class="inline">random.random()</code></td></tr>
           <tr><td><code class="inline">random</code></td><td><code class="inline">shuffle(list)</code></td><td>List ko mix karna</td><td><code class="inline">random.shuffle(cards)</code></td></tr>
         </table>
-      </div>
-
-<span class="cm"># alias — chhota naam</span>
-<span class="kw">import</span> <span class="bi">random</span> <span class="kw">as</span> <span class="va">rnd</span>
-<span class="fn">print</span>(<span class="va">rnd</span>.<span class="fn">randint</span>(<span class="nm">1</span>, <span class="nm">100</span>))   <span class="cm"># 1-100 mein random number</span>
-<span class="fn">print</span>(<span class="va">rnd</span>.<span class="fn">choice</span>([<span class="st">"heads"</span>, <span class="st">"tails"</span>]))  <span class="cm"># Random choice</span></pre>
       </div>
 
       <h3>Important Built-in Modules</h3>
