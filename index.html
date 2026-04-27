@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
 <title>Python Seekho — Roman Hindi Mein | Complete Guide</title>
 <meta name="description" content="Python programming sikhiye Roman Hindi mein — Basic se Advanced tak, bilkul free!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -527,7 +528,7 @@ td code.inline{font-size:0.78rem}
       </div>
 
       <div class="box box-purple">
-        <strong>🚀 GitHub Pages Setup:</strong> Ye ek single <code class="inline">index.html</code> file hai — kisi bhi repo mein daalo, GitHub Pages enable karo, bas! Koi build step nahi, koi dependencies nahi.
+        <strong>🐍 Interesting Fact:</strong> Python ke creator Guido van Rossum ne iska naam "Monty Python’s Flying Circus" (ek TV show) ke naam par rakha tha, na ki kisi sanp (snake) ke naam par!
       </div>
 
       <h3>Python Kyun Seekhein?</h3>
@@ -1232,6 +1233,32 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
         <span class="fn">print</span>(<span class="st">"ID nahi hai, sorry"</span>)
 <span class="kw">else</span>:
     <span class="fn">print</span>(<span class="st">"Age restriction hai"</span>)</pre>
+      </div>
+      <h3>Nested Conditions Deep Dive</h3>
+      <p>Jab ek condition ke andar doosri condition hoti hai, use <strong>Nested Condition</strong> kehte hain. Yeh tab use hota hai jab pehli condition true hone par hi doosri check karni ho.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">deep_nested.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="va">num</span> = <span class="nm">15</span>
+
+<span class="kw">if</span> <span class="va">num</span> >= <span class="nm">0</span>:
+    <span class="kw">if</span> <span class="va">num</span> == <span class="nm">0</span>:
+        <span class="fn">print</span>(<span class="st">"Zero"</span>)
+    <span class="kw">else</span>:
+        <span class="fn">print</span>(<span class="st">"Positive number"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"Negative number"</span>)
+
+<span class="cm"># Example 2: Login System</span>
+<span class="va">user</span> = <span class="st">"admin"</span>
+<span class="va">pwd</span> = <span class="st">"1234"</span>
+
+<span class="kw">if</span> <span class="va">user</span> == <span class="st">"admin"</span>:
+    <span class="kw">if</span> <span class="va">pwd</span> == <span class="st">"1234"</span>:
+        <span class="fn">print</span>(<span class="st">"Login Success!"</span>)
+    <span class="kw">else</span>:
+        <span class="fn">print</span>(<span class="st">"Galat Password"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"User nahi mila"</span>)</pre>
       </div>
 
       <h3>Ternary / One-liner if-else</h3>
@@ -1949,6 +1976,23 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
 
       <div class="box box-purple"><strong>🎯 Best Practice:</strong> Global variables se bachne ki koshish karo — functions mein parameters pass karo aur values return karo. Global variables code ko samajhna mushkil banate hain.</div>
 
+      <h3>Modular Programming & Code Reusability</h3>
+      <p><strong>Modular Programming</strong> ka matlab hai apne bade program ko chhote, manageable aur independent hisson (modules) mein baantna. Isse code reuse karna aasaan ho jata hai.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">modular_example.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="cm"># Reusable function — ek jagah likho, kahi bhi use karo</span>
+<span class="kw">def</span> <span class="fn">calculate_gst</span>(<span class="va">amount</span>):
+    <span class="kw">return</span> <span class="va">amount</span> * <span class="nm">0.18</span>
+
+<span class="va">bill1</span> = <span class="nm">1000</span>
+<span class="va">tax1</span> = <span class="fn">calculate_gst</span>(<span class="va">bill1</span>)
+
+<span class="va">bill2</span> = <span class="nm">5000</span>
+<span class="va">tax2</span> = <span class="fn">calculate_gst</span>(<span class="va">bill2</span>)
+
+<span class="fn">print</span>(<span class="st">f"Tax 1: <span class="va">{tax1}</span>, Tax 2: <span class="va">{tax2}</span>"</span>)</pre>
+      </div>
+      <div class="box box-teal"><strong>💡 Fayde:</strong><br>1. <strong>Reusability:</strong> Ek baar likho, baar baar use karo.<br>2. <strong>Maintainability:</strong> Bug fix karna aasaan hai (sirf ek jagah change).<br>3. <strong>Readability:</strong> Code saaf aur organized dikhta hai.</div>
       <div class="page-nav">
         <button class="pnav-btn" onclick="showSection('s15')">← Sets</button>
         <button class="pnav-btn next" onclick="showSection('s17')"><span><span class="pnav-label">Unit 4 Shuru</span>File Handling →</span></button>
@@ -2120,6 +2164,27 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
       </div>
 
       <div class="page-nav">
+      <h3>File Pointer — seek() aur tell()</h3>
+      <p>File pointer batata hai ki hum file mein abhi kahan hain. <strong>tell()</strong> current position batata hai, aur <strong>seek()</strong> se hum pointer ko kahin bhi bhej sakte hain.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">file_pointer.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="kw">with</span> <span class="fn">open</span>(<span class="st">"data.txt"</span>, <span class="st">"w+"</span>) <span class="kw">as</span> <span class="va">f</span>:
+    <span class="va">f</span>.<span class="fn">write</span>(<span class="st">"0123456789"</span>)
+
+    <span class="fn">print</span>(<span class="st">f"Abhi pointer yahan hai: <span class="va">{f.tell()}</span>"</span>) <span class="cm"># 10</span>
+
+    <span class="cm"># Pointer ko shuruat mein le jao</span>
+    <span class="va">f</span>.<span class="fn">seek</span>(<span class="nm">0</span>)
+    <span class="fn">print</span>(<span class="st">f"Seek ke baad: <span class="va">{f.tell()}</span>"</span>)    <span class="cm"># 0</span>
+
+    <span class="va">content</span> = <span class="va">f</span>.<span class="fn">read</span>(<span class="nm">5</span>)
+    <span class="fn">print</span>(<span class="st">f"Pehli 5 bytes: <span class="va">{content}</span>"</span>)    <span class="cm"># 01234</span>
+    <span class="fn">print</span>(<span class="st">f"Ab pointer yahan hai: <span class="va">{f.tell()}</span>"</span>) <span class="cm"># 5</span>
+
+    <span class="cm"># 5 character skip karke aage padhna</span>
+    <span class="va">f</span>.<span class="fn">seek</span>(<span class="nm">8</span>)
+    <span class="fn">print</span>(<span class="st">f"Index 8 se data: <span class="va">{f.read()}</span>"</span>) <span class="cm"># 89</span></pre>
+      </div>
         <button class="pnav-btn" onclick="showSection('s17')">← File Handling</button>
         <button class="pnav-btn next" onclick="showSection('s19')"><span><span class="pnav-label">Agle Topic Par</span>Exception Handling →</span></button>
       </div>
@@ -2142,6 +2207,20 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
     <span class="fn">print</span>(<span class="nm">10</span> / <span class="va">x</span>)
 <span class="kw">except</span> <span class="bi">ValueError</span>:
     <span class="fn">print</span>(<span class="st">"Yeh number nahi hai!"</span>)
+      <h3>File Operations Mein Exceptions</h3>
+      <p>File handling ke waqt sabse zyada errors aate hain (jaise file na milna). Isliye inke liye Exception handling zaroori hai.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">file_exception.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="kw">try</span>:
+    <span class="kw">with</span> <span class="fn">open</span>(<span class="st">"missing.txt"</span>, <span class="st">"r"</span>) <span class="kw">as</span> <span class="va">f</span>:
+        <span class="va">content</span> = <span class="va">f</span>.<span class="fn">read</span>()
+<span class="kw">except</span> <span class="bi">FileNotFoundError</span>:
+    <span class="fn">print</span>(<span class="st">"Error: File nahi mili! Naam check karo."</span>)
+<span class="kw">except</span> <span class="bi">IOError</span>:
+    <span class="fn">print</span>(<span class="st">"Error: File padhne mein dikkat aayi."</span>)
+<span class="kw">finally</span>:
+    <span class="fn">print</span>(<span class="st">"Cleanup code yahan likhte hain (agar needed ho)."</span>)</pre>
+      </div>
 <span class="kw">except</span> <span class="bi">ZeroDivisionError</span>:
     <span class="fn">print</span>(<span class="st">"Zero se divide nahi kar sakte!"</span>)
 
