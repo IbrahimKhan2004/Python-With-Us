@@ -563,6 +563,20 @@ td code.inline{font-size:0.78rem}
       <div class="box box-yellow"><strong>📖 Fun Fact:</strong> Guido van Rossum ne Python ka naam "Monty Python's Flying Circus" — ek British comedy show — ke naam pe rakha! Sanp (snake) se koi connection nahi tha pehle. 😄</div>
 
       <h3>Python Ki Features — Kya Khaas Hai?</h3>
+      <!-- Added: Formal features table — syllabus explicitly says "Features" as a topic; existing diff-grid was informal cards without complete feature list -->
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Feature</th><th>Matlab</th><th>Fayda</th></tr>
+          <tr><td><strong>Interpreted</strong></td><td>Line by line chalti hai, compile nahi hoti</td><td>Error turant milta hai, fast development</td></tr>
+          <tr><td><strong>Dynamically Typed</strong></td><td>Variable ka type runtime pe decide hota hai</td><td><code class="inline">x = 5</code> phir <code class="inline">x = "hi"</code> — dono valid</td></tr>
+          <tr><td><strong>High-level Language</strong></td><td>Human ke close, machine se door</td><td>Readable code, kam lines mein zyada kaam</td></tr>
+          <tr><td><strong>Object-Oriented</strong></td><td>Classes aur objects support karta hai</td><td>Real-world problems easily model hote hain</td></tr>
+          <tr><td><strong>Open Source / Free</strong></td><td>Source code freely available hai</td><td>Koi license fee nahi, community support</td></tr>
+          <tr><td><strong>Cross-Platform</strong></td><td>Windows, Mac, Linux — sab pe chalti hai</td><td>Ek baar likho, kahin bhi chalao</td></tr>
+          <tr><td><strong>Large Standard Library</strong></td><td>100+ built-in modules pehle se hain</td><td>File, math, web, JSON — sab ke liye tools</td></tr>
+          <tr><td><strong>Extensible</strong></td><td>C/C++ mein likhe modules add kar sakte hain</td><td>Performance critical parts ko fast banao</td></tr>
+        </table>
+      </div>
       <div class="diff-grid">
         <div class="diff-card"><div class="dc-type">Readable</div><div class="dc-ex">print("Hello")</div><div class="dc-desc">English jaisi syntax</div></div>
         <div class="diff-card"><div class="dc-type">Interpreted</div><div class="dc-ex">Line by line</div><div class="dc-desc">Compile nahi karna padta</div></div>
@@ -1114,6 +1128,35 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
 <span class="fn">print</span>(<span class="fn">bool</span>(<span class="st">"hi"</span>))       <span class="cm"># True</span></pre>
       </div>
 
+      <!-- Added: Expressions section — syllabus Unit 1 explicitly lists "Type casting and expressions" but was missing -->
+      <h3>Expressions — Values Ka Combination</h3>
+      <p>Expression matlab <strong>ek ya zyada values ko operators se jod ke ek naya value banana</strong>. Jab Python kisi expression ko evaluate karta hai, toh ek single value milti hai.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">expressions.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="cm"># Arithmetic Expression — result ek number hota hai</span>
+<span class="va">result</span> = <span class="nm">2</span> + <span class="nm">3</span> * <span class="nm">4</span>    <span class="cm"># 14 — BODMAS rule lagta hai! (3*4 pehle)</span>
+<span class="va">result2</span> = (<span class="nm">2</span> + <span class="nm">3</span>) * <span class="nm">4</span>  <span class="cm"># 20 — brackets se override karo</span>
+
+<span class="cm"># Boolean/Relational Expression — result True ya False hota hai</span>
+<span class="va">check</span> = <span class="nm">10</span> > <span class="nm">5</span>         <span class="cm"># True</span>
+<span class="va">check2</span> = (<span class="nm">5</span> + <span class="nm">3</span>) == <span class="nm">8</span>  <span class="cm"># True</span>
+
+<span class="cm"># String Expression — text jodna</span>
+<span class="va">naam</span> = <span class="st">"Rani"</span>
+<span class="va">greeting</span> = <span class="st">"Hello, "</span> + <span class="va">naam</span> + <span class="st">"!"</span>   <span class="cm"># Hello, Rani!</span>
+
+<span class="cm"># Complex expression — sab ek saath</span>
+<span class="va">umar</span> = <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Umar batao: "</span>))
+<span class="va">adult</span> = <span class="va">umar</span> >= <span class="nm">18</span> <span class="kw">and</span> <span class="va">umar</span> < <span class="nm">60</span>   <span class="cm"># True agar 18-59 ke beech hai</span>
+<span class="fn">print</span>(<span class="st">f"Working age adult: <span class="va">{adult}</span>"</span>)
+
+<span class="cm"># Operator precedence (BODMAS jaisi priority)</span>
+<span class="cm"># ** → *, /, //, % → +, - → Comparison → not → and → or</span>
+<span class="fn">print</span>(<span class="nm">2</span> + <span class="nm">3</span> ** <span class="nm">2</span>)        <span class="cm"># 11 — pehle 3**2=9, phir 2+9</span>
+<span class="fn">print</span>(<span class="nm">10</span> - <span class="nm">2</span> * <span class="nm">3</span> + <span class="nm">1</span>)   <span class="cm"># 5 — pehle 2*3=6, phir 10-6+1</span></pre>
+      </div>
+      <div class="box box-yellow"><strong>📌 Expression vs Statement:</strong> Expression kuch <em>return karta hai</em> (jaise <code class="inline">2 + 3</code> returns <code class="inline">5</code>). Statement ek <em>action karta hai</em> (jaise <code class="inline">print("hello")</code>). Dono milkar program banata hai!</div>
+
       <h3>Practical Program — Calculator</h3>
       <div class="code-block">
         <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">simple_calculator.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
@@ -1456,6 +1499,39 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
 <span class="fn">print</span>(<span class="fn">sum_all</span>(<span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>, <span class="nm">4</span>, <span class="nm">5</span>))     <span class="cm"># 15</span></pre>
       </div>
 
+      <!-- Added: Modular Programming section — Unit 2 syllabus lists "Introduction to modular programming and code reusability" which was entirely missing from S10 -->
+      <h3>Modular Programming — Code Ko Tukdon Mein Baanto</h3>
+      <p><strong>Modular programming</strong> ka matlab hai — bade problem ko <em>chhote chhote functions</em> mein todna. Har function ek kaam kare — isse code <strong>reusable, readable aur testable</strong> ho jaata hai.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">modular_example.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="cm"># Bina modular programming — sab ek jagah (BAD)</span>
+<span class="va">naam</span> = <span class="fn">input</span>(<span class="st">"Naam: "</span>)
+<span class="va">marks</span> = <span class="fn">float</span>(<span class="fn">input</span>(<span class="st">"Marks: "</span>))
+<span class="kw">if</span> <span class="va">marks</span> >= <span class="nm">90</span>: <span class="va">grade</span> = <span class="st">"A+"</span>
+<span class="kw">elif</span> <span class="va">marks</span> >= <span class="nm">75</span>: <span class="va">grade</span> = <span class="st">"A"</span>
+<span class="kw">else</span>: <span class="va">grade</span> = <span class="st">"B"</span>
+<span class="fn">print</span>(<span class="st">f"<span class="va">{naam}</span>: <span class="va">{grade}</span>"</span>)
+
+<span class="cm">---</span>
+<span class="cm"># Modular — alag alag functions mein (GOOD)</span>
+<span class="kw">def</span> <span class="fn">get_grade</span>(<span class="va">marks</span>):     <span class="cm"># Sirf grade ka kaam</span>
+    <span class="kw">if</span> <span class="va">marks</span> >= <span class="nm">90</span>: <span class="kw">return</span> <span class="st">"A+"</span>
+    <span class="kw">elif</span> <span class="va">marks</span> >= <span class="nm">75</span>: <span class="kw">return</span> <span class="st">"A"</span>
+    <span class="kw">else</span>: <span class="kw">return</span> <span class="st">"B"</span>
+
+<span class="kw">def</span> <span class="fn">display_result</span>(<span class="va">naam</span>, <span class="va">marks</span>):  <span class="cm"># Sirf dikhane ka kaam</span>
+    <span class="va">g</span> = <span class="fn">get_grade</span>(<span class="va">marks</span>)          <span class="cm"># Reuse karo get_grade!</span>
+    <span class="fn">print</span>(<span class="st">f"{naam}: {marks} marks → Grade {g}"</span>)
+
+<span class="kw">def</span> <span class="fn">main</span>():                        <span class="cm"># Main logic ek jagah</span>
+    <span class="va">naam</span> = <span class="fn">input</span>(<span class="st">"Naam: "</span>)
+    <span class="va">marks</span> = <span class="fn">float</span>(<span class="fn">input</span>(<span class="st">"Marks: "</span>))
+    <span class="fn">display_result</span>(<span class="va">naam</span>, <span class="va">marks</span>)   <span class="cm"># Reuse karo display_result!</span>
+
+<span class="fn">main</span>()   <span class="cm"># Program start</span></pre>
+      </div>
+      <div class="box box-teal"><strong>✅ Code Reusability:</strong> <code class="inline">get_grade()</code> function ek baar likha, baar baar use kar sakte hain — <code class="inline">get_grade(85)</code>, <code class="inline">get_grade(60)</code>, <code class="inline">get_grade(95)</code>. Yahi <strong>reusability</strong> hai. Agar rule badla toh sirf ek jagah change karo!</div>
+
       <div class="page-nav">
         <button class="pnav-btn" onclick="showSection('s9')">← Loop Control</button>
         <button class="pnav-btn next" onclick="showSection('s11')"><span><span class="pnav-label">Unit 3 Shuru</span>Strings →</span></button>
@@ -1767,6 +1843,54 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
       <h2 class="sec-title">Advanced Functions — Lambda, Scope, Modules</h2>
       <p class="sec-subtitle">Lambda functions, local/global scope, aur code reusability</p>
 
+      <!-- Added: Built-in Functions section — Unit 3 syllabus lists "built-in" functions as a type alongside lambda and user-defined, but this was not covered -->
+      <h3>Built-in Functions — Python Ke Ready-Made Functions</h3>
+      <p>Python mein <strong>70+ built-in functions</strong> pehle se available hain — import karne ki zaroorat nahi. Sabse common wale yahan hain:</p>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>Function</th><th>Kaam</th><th>Example</th></tr>
+          <tr><td><code class="inline">print()</code></td><td>Screen pe dikhao</td><td><code class="inline">print("hello")</code></td></tr>
+          <tr><td><code class="inline">input()</code></td><td>User se lena</td><td><code class="inline">input("Name: ")</code></td></tr>
+          <tr><td><code class="inline">len()</code></td><td>Length batao</td><td><code class="inline">len([1,2,3]) → 3</code></td></tr>
+          <tr><td><code class="inline">type()</code></td><td>Data type batao</td><td><code class="inline">type(5) → int</code></td></tr>
+          <tr><td><code class="inline">int(), float(), str()</code></td><td>Type convert karo</td><td><code class="inline">int("42") → 42</code></td></tr>
+          <tr><td><code class="inline">range()</code></td><td>Number sequence</td><td><code class="inline">range(1, 6)</code></td></tr>
+          <tr><td><code class="inline">abs()</code></td><td>Absolute value</td><td><code class="inline">abs(-5) → 5</code></td></tr>
+          <tr><td><code class="inline">max(), min()</code></td><td>Bada/chhota dhundho</td><td><code class="inline">max([3,1,7]) → 7</code></td></tr>
+          <tr><td><code class="inline">sum()</code></td><td>Jod karo</td><td><code class="inline">sum([1,2,3]) → 6</code></td></tr>
+          <tr><td><code class="inline">sorted()</code></td><td>Sort karo</td><td><code class="inline">sorted([3,1,2]) → [1,2,3]</code></td></tr>
+          <tr><td><code class="inline">round()</code></td><td>Round off</td><td><code class="inline">round(3.567, 2) → 3.57</code></td></tr>
+          <tr><td><code class="inline">enumerate()</code></td><td>Index ke saath loop</td><td><code class="inline">enumerate(["a","b"])</code></td></tr>
+          <tr><td><code class="inline">zip()</code></td><td>Do lists ek saath</td><td><code class="inline">zip([1,2],["a","b"])</code></td></tr>
+          <tr><td><code class="inline">map(), filter()</code></td><td>Lambda ke saath</td><td><code class="inline">map(fn, list)</code></td></tr>
+        </table>
+      </div>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">builtin_functions.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="va">marks</span> = [<span class="nm">85</span>, <span class="nm">92</span>, <span class="nm">78</span>, <span class="nm">95</span>, <span class="nm">61</span>]
+
+<span class="fn">print</span>(<span class="fn">len</span>(<span class="va">marks</span>))      <span class="cm"># 5 — kitne hain</span>
+<span class="fn">print</span>(<span class="fn">max</span>(<span class="va">marks</span>))      <span class="cm"># 95 — sabse bada</span>
+<span class="fn">print</span>(<span class="fn">min</span>(<span class="va">marks</span>))      <span class="cm"># 61 — sabse chhota</span>
+<span class="fn">print</span>(<span class="fn">sum</span>(<span class="va">marks</span>))      <span class="cm"># 411 — sabka jod</span>
+<span class="fn">print</span>(<span class="fn">sorted</span>(<span class="va">marks</span>))  <span class="cm"># [61,78,85,92,95] — sort hua</span>
+
+<span class="cm"># zip() — do lists saath mein pair karo</span>
+<span class="va">names</span> = [<span class="st">"Riya"</span>, <span class="st">"Amit"</span>, <span class="st">"Priya"</span>]
+<span class="va">scores</span> = [<span class="nm">90</span>, <span class="nm">75</span>, <span class="nm">85</span>]
+<span class="kw">for</span> <span class="va">naam</span>, <span class="va">score</span> <span class="kw">in</span> <span class="fn">zip</span>(<span class="va">names</span>, <span class="va">scores</span>):
+    <span class="fn">print</span>(<span class="st">f"{naam}: {score}"</span>)   <span class="cm"># Riya: 90, Amit: 75, Priya: 85</span>
+
+<span class="cm"># abs() aur round()</span>
+<span class="fn">print</span>(<span class="fn">abs</span>(<span class="nm">-42</span>))          <span class="cm"># 42 — negative hatao</span>
+<span class="fn">print</span>(<span class="fn">round</span>(<span class="nm">3.14159</span>, <span class="nm">2</span>)) <span class="cm"># 3.14 — 2 decimal tak</span></pre>
+      </div>
+      <div class="box box-purple"><strong>🎯 Teen Types of Functions:</strong><br>
+        1. <strong>Built-in</strong> — Python mein pehle se hain: <code class="inline">print(), len(), input()</code><br>
+        2. <strong>User-defined</strong> — Hum khud <code class="inline">def</code> se banate hain: <code class="inline">def greet(): ...</code><br>
+        3. <strong>Lambda</strong> — Ek line ka anonymous function: <code class="inline">lambda x: x*2</code>
+      </div>
+
       <h3>Lambda — Anonymous Functions</h3>
       <div class="code-block">
         <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">lambda.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
@@ -1836,6 +1960,35 @@ ka string"""</span>            <span class="cm"># triple quotes — multiline</s
       <div class="section-label label-red">Unit 4 · Topic 17</div>
       <h2 class="sec-title">File Handling — Files Ke Saath Kaam</h2>
       <p class="sec-subtitle">Data permanently save karna — File open, read, write, close</p>
+
+      <!-- Added: File Types section — syllabus Unit 4 says "File Types, File modes" but only modes existed -->
+      <h3>File Types — Kitne Prakar Ki Files?</h3>
+      <p>Python mein mainly <strong>do prakar ki files</strong> hoti hain — Text aur Binary. Dono ka use alag alag hota hai.</p>
+      <div class="tbl-wrap">
+        <table>
+          <tr><th>File Type</th><th>Kya Hota Hai</th><th>Extension Examples</th><th>Mode</th></tr>
+          <tr><td><strong>Text File</strong></td><td>Human-readable characters (ASCII/Unicode). Har line <code class="inline">\n</code> se end hoti hai.</td><td>.txt, .csv, .py, .html, .json</td><td><code class="inline">r, w, a, r+</code></td></tr>
+          <tr><td><strong>Binary File</strong></td><td>Raw bytes — insaan seedha nahi padh sakta. Images, audio, videos, compiled code.</td><td>.jpg, .mp3, .pdf, .exe, .pkl</td><td><code class="inline">rb, wb, ab</code></td></tr>
+        </table>
+      </div>
+      <div class="code-block">
+        <div class="code-header"><div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><div class="code-lang">file_types.py</div><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+        <pre><span class="cm"># Text file — normal mode (default)</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="st">"notes.txt"</span>, <span class="st">"w"</span>) <span class="kw">as</span> <span class="va">f</span>:   <span class="cm"># w = text write mode</span>
+    <span class="va">f</span>.<span class="fn">write</span>(<span class="st">"Yeh ek text file hai!\n"</span>)
+
+<span class="cm"># Binary file — 'b' lagao mode mein</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="st">"photo.jpg"</span>, <span class="st">"rb"</span>) <span class="kw">as</span> <span class="va">f</span>:  <span class="cm"># rb = binary read mode</span>
+    <span class="va">data</span> = <span class="va">f</span>.<span class="fn">read</span>()
+    <span class="fn">print</span>(<span class="st">f"File size: <span class="va">{len(data)}</span> bytes"</span>)
+
+<span class="cm"># Binary file copy karna</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="st">"photo.jpg"</span>, <span class="st">"rb"</span>) <span class="kw">as</span> <span class="va">src</span>:   <span class="cm"># source binary padhna</span>
+    <span class="va">bytes_data</span> = <span class="va">src</span>.<span class="fn">read</span>()
+<span class="kw">with</span> <span class="fn">open</span>(<span class="st">"copy.jpg"</span>, <span class="st">"wb"</span>) <span class="kw">as</span> <span class="va">dst</span>:    <span class="cm"># copy binary likhna</span>
+    <span class="va">dst</span>.<span class="fn">write</span>(<span class="va">bytes_data</span>)</pre>
+      </div>
+      <div class="box box-teal"><strong>💡 Rule:</strong> Agar file <em>text editor mein khulti hai</em> (Notepad, VS Code) toh text file hai — normal mode use karo. Agar nahi khulti (image, video, zip) toh binary file hai — <code class="inline">rb/wb</code> mode use karo.</div>
 
       <h3>File Modes — Kaise Kholein?</h3>
       <div class="tbl-wrap">
