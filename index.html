@@ -2508,6 +2508,8 @@ function showSection(id) {
 
   // Close sidebar on mobile
   if (window.innerWidth <= 768) closeSidebar();
+  // Save progress
+  localStorage.setItem("python_last_section", id);
 }
 
 function navigate(dir) {
@@ -2570,7 +2572,9 @@ function closeSidebar() {
 }
 
 // Init
-showSection('home');
+const saved = localStorage.getItem("python_last_section");
+if (saved && order.includes(saved)) showSection(saved);
+else showSection('home');
 </script>
 </body>
 </html>
